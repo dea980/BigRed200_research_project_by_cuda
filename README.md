@@ -34,15 +34,15 @@ The research demonstrates that there is a substantial gap in running time betwee
 Future research directions include examining the thermal dynamics of CPU and GPU operations to further understand their efficiency and potential improvements in cooling mechanisms or energy consumption.
 
 ## References
-- **For GPU Definition and CPU definition
+- **For GPU Definition and CPU definition** 
 [https://www.intel.com/content/www/us/en/products/docs/processors/cpu-vs-gpu.html]
-- **Why I transpose matrix can show the difference between GPU and CPU
+- **Why I transpose matrix can show the difference between GPU and CPU** 
 [https://www.mathworks.com/discovery/deep-learning.html]
-- **Matrix Transpose with naive
+- **Matrix Transpose with naive** 
 [https://en.wikipedia.org/wiki/In-place_matrix_transposition] 
-- **BigRed200 info
+- **BigRed200 info** 
 [https://kb.iu.edu/d/brcc] 
-- **SHEM method
+- **SHEM method** 
 [https://en.wikipedia.org/wiki/SHMEM] 
 
 
