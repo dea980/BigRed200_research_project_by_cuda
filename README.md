@@ -41,10 +41,8 @@ Future research directions include examining the thermal dynamics of CPU and GPU
 - **Matrix Transpose with naive** 
 [https://en.wikipedia.org/wiki/In-place_matrix_transposition] 
 - **BigRed200 info**
-
 [https://kb.iu.edu/d/brcc] 
 - **SHEM method**
-  
 [https://en.wikipedia.org/wiki/SHMEM] 
 
 
