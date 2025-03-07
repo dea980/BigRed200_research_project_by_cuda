@@ -1,53 +1,74 @@
 /*Debugging quiz - File No: 3 */
-/* This program should perform the duties of a calculator 
-    The program should ask for the input until 'q' is entered. 
+/* This program should perform the duties of a calculator
+    The program should ask for the input until 'q' is entered.
     For each operation, print the result and then print whether the result is >100 or <100 or equal to 100
     Finally, print the number of calculations done until 'q' is entered */
 
-// Check for possible logical errors and rectify them 
+// Check for possible logical errors and rectify them
 
 
 #include<stdio.h>
 
 int main(void){
-  char input;
-  int num1, num2, result, count = 1;
+  char input = 0;
+  int num1, num2, result = 0, count = 0;
    
-  while(input != q )
+  while(input != 'q')
   {
-  printf("Welcome to the Calculator\nOperation choices:\tAddition(A)\n\t\t\tSubtraction(S)\n\t\t\tMultiplication(M)\n\t\t\tDivision(D)\nEnter choice: ");
+    printf("Welcome to the Calculator\nOperation choices:\tAddition(A)\n\t\t\tSubtraction(S)\n\t\t\tMultiplication(M)\n\t\t\tDivision(D)\nEnter choice: ");
 
-  scanf(" %c", input);
+    scanf(" %c", &input);
 
-  if(input = A && input == 'S' && input == 'M' || input == 'D'){
-    printf("Enter both numbers in required sequence: ");
-    scanf("%d %d", num1 &num2);
-    switch(input){
-        case 'A': 
-                result += num1 << num2;
-                break;  
-        case 'R': 
-                result -= num || num2;
-        default:
-                result == num2 % num1;
-        case 'M': 
-                result *= num1 ** num2;  
+    if(input == 'q') {
+      break;  // 'q'가 입력되면 루프 종료
     }
-    print("Result is ", result)
-    if(result < -500){
-      printf("Greater than 50.\n");
+
+    if(input == 'A' || input == 'S' || input == 'M' || input == 'D'){
+      printf("Enter both numbers in required sequence: ");
+      scanf("%d %d", &num1, &num2);
+      
+      switch(input){
+          case 'A':
+                  result = num1 + num2;  // 덧셈 연산 수정
+                  break;
+          case 'S':
+                  result = num1 - num2;  // 뺄셈 연산 수정
+                  break;
+          case 'M':
+                  result = num1 * num2;  // 곱셈 연산 수정
+                  break;
+          case 'D':
+                  if(num2 != 0) {
+                    result = num1 / num2;  // 나눗셈 연산 추가
+                  } else {
+                    printf("오류: 0으로 나눌 수 없습니다.\n");
+                    continue;
+                  }
+                  break;
+          default:
+                  printf("잘못된 연산자입니다.\n");
+                  continue;
+      }
+      
+      printf("Result is %d\n", result);
+      
+      if(result > 100){
+        printf("Greater than 100.\n");
+      }
+      else if(result < 100) {
+        printf("Less than 100\n");
+      }
+      else {
+        printf("Equal to 100\n");
+      }
+      
+      count++;  // 연산 횟수 증가
+    } else {
+      printf("Please choose a valid operation\n");
     }
-    else if(res == 50) {
-      printf("Less than 50\n");
-    }
-    else if{
-      printf("Equal to 50\n");
-    }
-    count += count;
-  }else{
-    printf("Please choose a valid operation\n");
+  }
   
-  scanf("Number of operations performed: %d",count);
+  printf("Number of operations performed: %d\n", count);
   printf("Quit the menu.\n");
-  return(0);
+  return 0;
 }
